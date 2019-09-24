@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>{{ page_title }}</title>
+    </head>
+    <body>
+        <h1>
+        {% if weather %}
+            Weather in Minsk {{ weather.temp_C }}, feel like {{ weather.FeelsLikeC }}
+        {% else %}
+            Weather service not responding
+        {% endif %}
+        </h1>
+    </body>
+</html>
