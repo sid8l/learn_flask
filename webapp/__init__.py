@@ -20,7 +20,7 @@ def create_app():
     @app.route('/login')
     def login():
         title = 'Sign in'
-        login_form=LoginForm()
+        login_form = LoginForm()
         return render_template('login.html', page_title=title, form=login_form)
 
     return app
