@@ -20,12 +20,10 @@ def get_python_news():
     if html:
         soup = BeautifulSoup(html, 'html.parser')
         all_news = soup.find('ul', class_='list-recent-posts').findAll('li')
-        print(all_news)
         for news in all_news:
             title = news.find('a').text
             url = news.find('a')['href']
             published = news.find('time')['datetime']
-            print(published)
             try:
                 published = datetime.strptime(published, '%Y-%m-%d')
             except ValueError:
