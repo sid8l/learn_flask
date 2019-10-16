@@ -11,4 +11,3 @@ def admin_index():
         return 'Hello admin!'
     else:
         return 'Nope'
-        
