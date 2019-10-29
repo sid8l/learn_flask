@@ -7,9 +7,6 @@ from webapp.db import db
 from webapp.news.models import News
 
 
-
-
-
 def get_python_news():
     html = get_html('https://www.python.org/blogs/')
     if html:
@@ -24,5 +21,3 @@ def get_python_news():
             except ValueError:
                 published = datetime.now()
             save_news(title=title, url=url, published=published)
-
-
