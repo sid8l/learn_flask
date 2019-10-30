@@ -21,3 +21,4 @@ def get_python_news():
             except ValueError:
                 published = datetime.now()
             save_news(title=title, url=url, published=published)
+
