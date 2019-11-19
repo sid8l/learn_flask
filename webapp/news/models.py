@@ -10,6 +10,9 @@ class News(db.Model):
     published = db.Column(db.DateTime, nullable=False)
     text = db.Column(db.Text, nullable=True)
 
+    def comments_count(self):
+        return Comments.query.filter(Comments.news_id == self.id).count()
+
     def __repr__(self):
         return '<News {} {}>'.format(self.title, self.url)
 
